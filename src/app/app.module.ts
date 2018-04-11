@@ -1,7 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {HeaderModule} from 'common-code-base';
+import {HeaderModule, HeaderService} from 'common-code-base';
 import {AppComponent} from './app.component';
+import {LoginModule} from './modules/login/login.module';
 
 
 @NgModule({
@@ -10,9 +11,10 @@ import {AppComponent} from './app.component';
   ],
   imports: [
     BrowserModule,
-    HeaderModule
+    HeaderModule,
+    LoginModule
   ],
-  providers: [],
+  providers: [HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

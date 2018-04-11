@@ -7,13 +7,11 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  userData: any;
 
   constructor() {
 
   }
 
-  login() {
-    // const data = this.headerService.userLogin();
-    console.log('data');
-  }
+
 }
