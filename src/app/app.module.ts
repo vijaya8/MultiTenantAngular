@@ -2,7 +2,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HeaderModule, HeaderService} from 'common-code-base';
 import {AppComponent} from './app.component';
-import {LoginModule} from './modules/login/login.module';
 
 
 @NgModule({
@@ -11,8 +10,7 @@ import {LoginModule} from './modules/login/login.module';
   ],
   imports: [
     BrowserModule,
-    HeaderModule,
-    LoginModule
+    HeaderModule
   ],
   providers: [HeaderService],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {HeaderService} from 'common-code-base';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,15 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  userData: any;
 
-  constructor() {
+  constructor(private headerService: HeaderService) {
 
   }
 
+  getUsers() {
+    this.headerService.userLogin().subscribe((returnData) => {
+      console.log('returnData', returnData);
+    });
+  }
 
 }
